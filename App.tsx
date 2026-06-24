@@ -5,19 +5,16 @@ import StartGameScreen from "./screens/StartGameScreen";
 export default function App() {
   return (
     <View style={styles.container}>
-      <StartGameScreen />;
-      <LinearGradient
-        // Background Linear Gradient
-        colors={["#5b0b33", "#ddb52f"]}
-        style={styles.background}
-      >
+      <LinearGradient colors={["#5b0b33", "#ddb52f"]} style={styles.background}>
         <ImageBackground
           source={require("./assets/ana.jpg")}
           resizeMode="cover"
-          style={styles.container}
+          style={{ flex: 1 }}
           imageStyle={styles.backgroundImageStyle}
-        ></ImageBackground>
+        />
       </LinearGradient>
+
+      <StartGameScreen />
     </View>
   );
 }

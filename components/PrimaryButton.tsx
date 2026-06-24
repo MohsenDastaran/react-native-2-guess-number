@@ -1,13 +1,15 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 type Props = {
   children: React.ReactNode;
+  onPress?: () => void;
 };
 
 const PrimaryButton = (props: Props) => {
   const pressHandler = () => {
-    console.log("Pressed");
+    console.log("Button Pressed");
+    props.onPress?.();
   };
 
   return (
