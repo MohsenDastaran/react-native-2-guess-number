@@ -3,14 +3,14 @@ import React from "react";
 
 type Props = {};
 
-const StartGameScreen = (props: Props) => {
+const GameScreen = (props: Props) => {
   return (
     <View>
-      <Text>StartGameScreen</Text>
+      <Text>GameScreen</Text>
     </View>
   );
 };
 
-export default StartGameScreen;
+export default GameScreen;
 
 const styles = StyleSheet.create({});

@@ -1,10 +1,49 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, ImageBackground, View } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 import StartGameScreen from "./screens/StartGameScreen";
-// import GameOverScreen from "./screens/GameOverScreen";
-// import GameScreen from "./screens/GameScreen";
 
 export default function App() {
-  return <StartGameScreen />;
+  return (
+    <View style={styles.container}>
+      <StartGameScreen />;
+      <LinearGradient
+        // Background Linear Gradient
+        colors={["#5b0b33", "#ddb52f"]}
+        style={styles.background}
+      >
+        <ImageBackground
+          source={require("./assets/ana.jpg")}
+          resizeMode="cover"
+          style={styles.container}
+          imageStyle={styles.backgroundImageStyle}
+        ></ImageBackground>
+      </LinearGradient>
+    </View>
+  );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    // justifyContent: "center",
+  },
+  background: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    height: "100%",
+  },
+  button: {
+    padding: 15,
+    alignItems: "center",
+    borderRadius: 5,
+  },
+  text: {
+    backgroundColor: "transparent",
+    fontSize: 15,
+    color: "#fff",
+  },
+  backgroundImageStyle: { opacity: 0.4 },
+});
