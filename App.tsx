@@ -18,7 +18,7 @@ export default function App() {
           imageStyle={styles.backgroundImageStyle}
         />
       </LinearGradient>
-      <SafeAreaProvider style={styles.container}> 
+      <SafeAreaProvider  style={styles.container}> 
 
       {userNumber ? (
         <GameScreen userNumber={userNumber} />

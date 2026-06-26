@@ -32,7 +32,10 @@ const StartGameScreen = (props: StartGameScreenProps) => {
   return (
     <View style={styles.container}>
       <Text style={{ color: "#ddb52f", fontSize: 18, fontWeight: "bold" }}>
-        Guess Ana's Number
+        Write a Number Between 1 and 99
+      </Text>
+      <Text style={{ color: "#ddb52f", fontSize: 18, fontWeight: "bold" }}>
+        Ana Will Guess It
       </Text>
       <TextInput
         style={styles.textInput}
