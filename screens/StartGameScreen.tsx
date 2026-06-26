@@ -2,7 +2,10 @@ import { Alert, StyleSheet, Text, TextInput, View } from "react-native";
 import React from "react";
 import PrimaryButton from "../components/PrimaryButton";
 
-const StartGameScreen = () => {
+interface StartGameScreenProps {
+  onUserNumberSet: (number: number) => void;
+}
+const StartGameScreen = (props: StartGameScreenProps) => {
   const [enteredNumber, setEnteredNumber] = React.useState("");
   const confirmInputHandler = (text: string) => {
     if (text.trim().length === 0) {
@@ -23,12 +26,14 @@ const StartGameScreen = () => {
       ]);
       return;
     }
-    console.log("Confirmed Number: " + text);
-    Alert.alert("Confirmed Number", "You entered: " + text, [{ text: "OK" }]);
+    props.onUserNumberSet?.(Number(text)); // Call the callback function with the valid number
   };
 
   return (
     <View style={styles.container}>
+      <Text style={{ color: "#ddb52f", fontSize: 18, fontWeight: "bold" }}>
+        Guess Ana's Number
+      </Text>
       <TextInput
         style={styles.textInput}
         maxLength={2}
