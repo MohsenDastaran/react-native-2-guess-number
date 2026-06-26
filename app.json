@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "react-native-2-guess-number",
-    "slug": "react-native-2-guess-number",
-    "version": "1.0.0",
+    "name": "Guessing Game",
+    "slug": "example",
+    "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -13,18 +13,27 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
+      "buildNumber": "0.1.0",
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.mohsendastaransteam.example"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2cf5c1ba-512f-4dfb-900a-adac7b1483fc"
+      }
+    },
+    "owner": "mohsendastarans-team"
   }
 }
